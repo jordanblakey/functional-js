@@ -8,7 +8,7 @@ let animals = [
 ]
 
 
-// FILTER USING IMPERATIVE METHOD
+// PROCEDURAL FILTER IMPLEMENTATION
 // More logic, harder ro reason about, less readable, doesn't scale well.
 let dogs = []
 for (let i = 0; i < animals.length; i++) {
@@ -20,7 +20,7 @@ for (let i = 0; i < animals.length; i++) {
 }
 
 
-// FILTER USING FUNCTIONAL METHOD
+// FUNCTIONAL FILTER IMPLEMENTATION
 // Small, single-responsibility, composable, reusable functions.
 let isDog = (animal) => {return animal.species === 'dog'}
 let dogs2 = animals.filter(isDog)
