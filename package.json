@@ -1,0 +1,28 @@
+{
+  "name": "functional",
+  "version": "1.0.0",
+  "main": "1-filter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "babel src -d dist --presest babel-env"
+  },
+  "repository": "git+https://github.com/jordanblakey/functional-js.git",
+  "author": "Jordan Blakey <jordan@jordanblakey.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanblakey/functional-js/issues"
+  },
+  "homepage": "https://github.com/jordanblakey/functional-js#readme",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-env": "^2.4.1"
+  },
+  "babel": {
+    "plugins": [],
+    "presets": ["env"]
+  }
+}
