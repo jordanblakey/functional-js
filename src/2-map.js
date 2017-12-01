@@ -1,4 +1,4 @@
-let animals = [
+let arr = [
   { name: 'Fluffykins', species: 'rabbit' },
   { name: 'Caro', species: 'dog' },
   { name: 'Hamilton', species: 'rabbit' },
@@ -8,24 +8,14 @@ let animals = [
 ]
 
 // PROCEDURAL IMPLETMENTATION OF MAP
-let names = []
-for (let i = 0; i < animals.length; i++) {
-  // Build a list with only the name
-  names.push(animals[i].name)
-}
-
-console.log(names)
+let res = []
+for (let i = 0; i < arr.length; i++) res.push(arr[i].name)
+console.log(res)
 
 // FUNCTIONAL IMPLEMENTATION OF MAP
-let names2 = animals.map(animal => {
-  return animal.name
-})
+let res2 = arr.map(x => x.name)
+console.log(res2)
 
-console.log(names2)
-
-// BUILDING A NEW LIST WITH MAP
-let names3 = animals.map(animal => {
-  return animal.name + ' is a ' + animal.species
-})
-
-console.log(names3)
+// BUILDING AN ARRAY OF STRINGS WITH MAP
+let res3 = arr.map(x => x.name + ' is a ' + x.species)
+console.log(res3)

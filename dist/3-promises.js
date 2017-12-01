@@ -8,7 +8,6 @@ Object.defineProperty(exports, "__esModule", {
 
 function loadImg(url) {
   return new Promise(function (resolve, reject) {
-
     var image = new Image();
     image.onLoad = function () {
       resolve(image);

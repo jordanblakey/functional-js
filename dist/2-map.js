@@ -1,26 +1,21 @@
 'use strict';
 
-var animals = [{ name: 'Fluffykins', species: 'rabbit' }, { name: 'Caro', species: 'dog' }, { name: 'Hamilton', species: 'rabbit' }, { name: 'Harold', species: 'dog' }, { name: 'Ursula', species: 'dog' }, { name: 'Jimmy', species: 'dog' }];
+var arr = [{ name: 'Fluffykins', species: 'rabbit' }, { name: 'Caro', species: 'dog' }, { name: 'Hamilton', species: 'rabbit' }, { name: 'Harold', species: 'dog' }, { name: 'Ursula', species: 'dog' }, { name: 'Jimmy', species: 'dog' }];
 
 // PROCEDURAL IMPLETMENTATION OF MAP
-var names = [];
-for (var i = 0; i < animals.length; i++) {
-  // Build a list with only the name
-  names.push(animals[i].name);
-}
-
-console.log(names);
+var res = [];
+for (var i = 0; i < arr.length; i++) {
+  res.push(arr[i].name);
+}console.log(res);
 
 // FUNCTIONAL IMPLEMENTATION OF MAP
-var names2 = animals.map(function (animal) {
-  return animal.name;
+var res2 = arr.map(function (x) {
+  return x.name;
 });
+console.log(res2);
 
-console.log(names2);
-
-// BUILDING A NEW LIST WITH MAP
-var names3 = animals.map(function (animal) {
-  return animal.name + ' is a ' + animal.species;
+// BUILDING AN ARRAY OF STRINGS WITH MAP
+var res3 = arr.map(function (x) {
+  return x.name + ' is a ' + x.species;
 });
-
-console.log(names3);
+console.log(res3);
