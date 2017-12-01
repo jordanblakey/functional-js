@@ -3,23 +3,23 @@
 
 function loadImg(url) {
   return new Promise((resolve, reject) => {
-    let image = new Image()
+    let image = new Image();
     image.onLoad = function() {
-      resolve(image)
-    }
+      resolve(image);
+    };
     image.onError = function() {
-      let msg = 'Could not load at ' + url
-      reject(new Error(msg))
-    }
-    image.src = url
-  })
+      let msg = 'Could not load at ' + url;
+      reject(new Error(msg));
+    };
+    image.src = url;
+  });
 }
-export default loadImage
+export default loadImg;
 
 function addImg(src) {
-  let imgElem = document.createElement('img')
-  imgElem.src = src
-  document.body.appendChild(imgElem)
+  let imgElem = document.createElement('img');
+  imgElem.src = src;
+  document.body.appendChild(imgElem);
 }
 
 Promise.all([
@@ -28,8 +28,8 @@ Promise.all([
   loadImg('images/cat3.png')
 ])
   .then(images => {
-    images.forEach(img => addImg(img.src))
+    images.forEach(img => addImg(img.src));
   })
   .catch(error => {
-    console.log(error)
-  })
+    console.log(error);
+  });

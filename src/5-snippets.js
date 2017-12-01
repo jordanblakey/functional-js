@@ -11,46 +11,48 @@ import { remove as rm } from 'lodash' // ima -> import aliased portion
 
 // EXPORT
 export const functionName = params => 0 + params // enf -> Export Named Function
-export default (params) => 0; // edf -> Export Default Function
-export default class className {}; // ecl -> Export CLass
-export default class className extends baseclassName {}; // ece -> Export Class Extends
+export default params => 0 // edf -> Export Default Function
+// export default class className {}; // ecl -> Export CLass
+// export default class className extends baseclassName {}; // ece -> Export Class Extends
 
 // CLASS
-constructor(params) {} // con -> CONstructor
-methodName(params) {} // met -> METhod
-get propertyName() {} // pge -> Property GEtter
-set propertyName(value) {} // pse -> Property SEtter
+// constructor(params) {} // con -> CONstructor
+// methodName(params) {} // met -> METhod
+// get propertyName() {} // pge -> Property GEtter
+// set propertyName(value) {} // pse -> Property SEtter
 
 // FOR LOOPS
 array.forEach(currentItem => {}) // fre -> FoR Each
-for (const item of object) {} // fof -> FOr oF
-for (const item in object) {} // fin -> For IN
+for (const item of object) {
+} // fof -> FOr oF
+for (const item in object) {
+} // fin -> For IN
 
 // FUNCTIONS
-(params) => { } // anfn -> ANonymous FuNction
-const name = (params) => { } // nfn -> Named FuNction (arrow)
+params => {} // anfn -> ANonymous FuNction
+const name = params => {} // nfn -> Named FuNction (arrow)
 
 // DESTRUCTORS
-const {propertyName} = objectToDestruct; // dob -> Destructing OBject
-const [propertyName] = arrayToDestruct; // dar -> Destructing ARray
+const { propertyName } = objectToDestruct // dob -> Destructing OBject
+const [propertyName4] = arrayToDestruct // dar -> Destructing ARray
 
 // TIMER
-setInterval(() => { }, intervalInms); // sti -> SeT Interval
-setTimeout(() => { }, delayInms); // sto -> SeT timeOut
+setInterval(() => {}, intervalInms) // sti -> SeT Interval
+setTimeout(() => {}, delayInms) // sto -> SeT timeOut
 
 // ASYNC
-return new Promise((resolve, reject) => { }); // prom -> PROMise
+// return new Promise((resolve, reject) => { }); // prom -> PROMise
 
 // CONSOLE
-console.assert(expression, object); // cas -> Console ASsert
-console.clear(); // ccl -> Console CLear
-console.count(label); // cco -> Console COunt
-console.error(object); // cer -> Console ERror
-console.group("label"); // cgr -> Console GRoup
-console.log(object); // clg -> Console LoG
-console.trace(object); // ctr -> Console TRace
-console.warn(object); // cwr -> Console WaRn
-console.table(object); // clt -> ConsoLe Table
+console.assert(expression, object) // cas -> Console ASsert
+console.clear() // ccl -> Console CLear
+console.count(label) // cco -> Console COunt
+console.error(object) // cer -> Console ERror
+console.group('label') // cgr -> Console GRoup
+console.log(object) // clg -> Console LoG
+console.trace(object) // ctr -> Console TRace
+console.warn(object) // cwr -> Console WaRn
+console.table(object) // clt -> ConsoLe Table
 
 ////////////////////////////////////////////////////////////////////////////////
 // EXTENSION ES6 SNIPPETS ALL DEFINITIONS
@@ -68,9 +70,9 @@ import * as alias from 'module'
 // ima→	imports only a portion of the module as alias import { rename as localRename } from 'fs';
 import { originalName as alias2 } from 'module'
 // enf→	exports name function export const log = (parameter) => { console.log(parameter);};
-export const functionName = params => {}
+export const functionName2 = params => {}
 // edf→	exports default function export default (parameter) => { console.log(parameter);};
-export default params => {}
+// export default params => {}
 // ecl→	exports default class export default class Calculator { };
 // export default class className {};
 // ece→	exports default class by extending a base one export default class Calculator extends BaseClass { };
@@ -100,13 +102,13 @@ params => {}
 // nfn→	creates a named function const add = (params) => {}
 const name2 = params => {}
 // dob→	destructing object syntax const {rename} = fs
-const { propertyName } = objectToDestruct // ???
+const { propertyName3 } = objectToDestruct // ???
 // dar→	destructing array syntax const [first, second] = [1,2]
 const [propertyName2] = arrayToDestruct // ???
 // sti→	set interval helper method setInterval(() => {});
-setInterval(() => {}, intervalInms)
+setInterval2(() => {}, intervalInms)
 // sto→	set timeout helper method setTimeout(() => {});
-setTimeout(() => {}, delayInms)
+setTimeout2(() => {}, delayInms)
 // prom→	creates a new Promise return new Promise((resolve, reject) => {});
 // return new Promise((resolve, reject) => {});
 
@@ -135,4 +137,3 @@ console.warn(object)
 console.info(object)
 // clt→	console table console.table
 console.table(object)
-
