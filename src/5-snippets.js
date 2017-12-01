@@ -1,5 +1,59 @@
 ////////////////////////////////////////////////////////////////////////////////
-// FROM EXTENSION ES6 SNIPPETS
+// CORE JS SNIPPET MNEMONICS
+////////////////////////////////////////////////////////////////////////////////
+
+// IMPORT
+import _ from 'lodash' // imp -> IMPort entire module with name
+import 'fs' // imn -> IMport eNtire module
+import { remove, filter, map, isArray } from 'lodash' // imd -> again
+import * as lodash from 'lodash' // ime -> IMport Everything as alias
+import { remove as rm } from 'lodash' // ima -> import aliased portion
+
+// EXPORT
+export const functionName = params => 0 + params // enf -> Export Named Function
+export default (params) => 0; // edf -> Export Default Function
+export default class className {}; // ecl -> Export CLass
+export default class className extends baseclassName {}; // ece -> Export Class Extends
+
+// CLASS
+constructor(params) {} // con -> CONstructor
+methodName(params) {} // met -> METhod
+get propertyName() {} // pge -> Property GEtter
+set propertyName(value) {} // pse -> Property SEtter
+
+// FOR LOOPS
+array.forEach(currentItem => {}) // fre -> FoR Each
+for (const item of object) {} // fof -> FOr oF
+for (const item in object) {} // fin -> For IN
+
+// FUNCTIONS
+(params) => { } // anfn -> ANonymous FuNction
+const name = (params) => { } // nfn -> Named FuNction (arrow)
+
+// DESTRUCTORS
+const {propertyName} = objectToDestruct; // dob -> Destructing OBject
+const [propertyName] = arrayToDestruct; // dar -> Destructing ARray
+
+// TIMER
+setInterval(() => { }, intervalInms); // sti -> SeT Interval
+setTimeout(() => { }, delayInms); // sto -> SeT timeOut
+
+// ASYNC
+return new Promise((resolve, reject) => { }); // prom -> PROMise
+
+// CONSOLE
+console.assert(expression, object); // cas -> Console ASsert
+console.clear(); // ccl -> Console CLear
+console.count(label); // cco -> Console COunt
+console.error(object); // cer -> Console ERror
+console.group("label"); // cgr -> Console GRoup
+console.log(object); // clg -> Console LoG
+console.trace(object); // ctr -> Console TRace
+console.warn(object); // cwr -> Console WaRn
+console.table(object); // clt -> ConsoLe Table
+
+////////////////////////////////////////////////////////////////////////////////
+// EXTENSION ES6 SNIPPETS ALL DEFINITIONS
 ////////////////////////////////////////////////////////////////////////////////
 
 // # IMPORT AND EXPORT
@@ -82,75 +136,3 @@ console.info(object)
 // clt→	console table console.table
 console.table(object)
 
-// FROM EXTENSION FUNCTIONAL SNIPPETS
-// fn→ function youEdit(youEdit2) {}
-function index(index) {}
-// fne→ const youEdit = function(youEdit2) {};
-const index2 = function(index) {}
-// afn→ function(youEdit) {}
-// function(arg) {}
-// ae→ const youEdit = (youEdit2) => {};
-const name = arg => {}
-// aa→ (youEdit) => {}
-arg => {}
-// mfn→ youEdit.map((youEdit2) => {})
-name.map(arg => {})
-// ifn→ youEdit.includes(youEdit2)
-name.includes(arg)
-// ffn→ youEdit.filter((youEdit2) => {})
-name.filter(arg => {})
-// fefn→ youEdit.forEach((youEdit2) => {});
-index.forEach(index => {})
-// sfn→ youEdit.some((youEdit2) => {})
-index.some(index => {})
-// efn→ youEdit.every((youEdit2) => {})
-index.every(index => {})
-// rfn→ youEdit.reduce((youEdit2) => {})
-index.reduce(index => {})
-// cfn→ youEdit.concat(youEdit2)
-index.concat(index)
-// slfn→ youEdit.slice(youEdit2)
-index.slice(index)
-// spfn→ youEdit.split(youEdit2)
-index.split(index)
-// jfn→ youEdit.join(youEdit)
-index.join(index)
-// clg→ console.log(youEdit)
-console.log(index)
-// clgs→ console.log(`youEdit`)
-console.log(`index`)
-// cw→ console.warn(youEdit)
-console.warn(index)
-// cws→ console.warn(`youEdit`)
-console.warn(`index`)
-// ce→ console.error(youEdit)
-console.error(index)
-// ces→ console.error(`youEdit`)
-console.error(`index`)(
-  // iife→ (function youEdit(){})();
-  function index() {}
-)()
-// umdmd→ UMD module without params
-;(function(context, factory) {
-  if (typeof exports === 'object') {
-    module.exports = factory()
-  } else if (typeof define === 'function' && define.amd) {
-    define(factory)
-  } else {
-    context.yourModuleName = factory()
-  }
-})(this, function() {
-  // your module body
-})
-// umdmdp→ UMD module with params
-;(function(context, factory) {
-  if (typeof exports === 'object') {
-    module.exports = factory(require('b'))
-  } else if (typeof define === 'function' && define.amd) {
-    define(['b'], factory)
-  } else {
-    context.yourModuleName = factory(context.b)
-  }
-})(this, function(b) {
-  // your module body
-})
