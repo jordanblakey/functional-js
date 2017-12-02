@@ -1,0 +1,28 @@
+let countDownFrom = num => {
+  if (num === 0) return
+  console.log(num)
+  countDownFrom(num - 1)
+}
+// Tail call optimization
+countDownFrom(10)
+
+let categories = [
+  { id: 'animals', parent: null },
+  { id: 'mammals', parent: 'animals' },
+  { id: 'cats', parent: 'mammals' },
+  { id: 'dogs', parent: 'mammals' },
+  { id: 'chihuahua', parent: 'dogs' },
+  { id: 'labrador', parent: 'dogs' },
+  { id: 'persian', parent: 'cats' },
+  { id: 'siamese', parent: 'cats' }
+]
+
+let makeTree = (categ, parent) => {
+  let node = {}
+  categ.filter(c => c.parent === parent).forEach(c => {
+    node[c.id] = makeTree(categ, c.id)
+  })
+  return node
+}
+
+console.log(JSON.stringify(makeTree(categories, null), null, 2))
