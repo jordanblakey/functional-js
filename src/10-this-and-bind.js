@@ -25,6 +25,12 @@ boromir.speak()
 let blabber = boromir.speak
 console.log(blabber()) // because blabber is not a property of boromir, 'this' in talk refers to the global object
 
+let gollum = {
+  jabber: boromir.speak,
+  sound: 'My preciousssss...'
+}
+gollum.jabber()
+
 // EXAMPLE FROM MOZILLA ////////////////////////////////////////////////////////
 
 this.x = 9 // this refers to global "window" object here in the browser
