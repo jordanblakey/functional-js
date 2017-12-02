@@ -27,4 +27,4 @@ let stupidNumberStream = {
   }
 }
 
-// stupidNumberStream.each(console.log)
+stupidNumberStream.each(console.log)
