@@ -16,17 +16,16 @@
   "description": "",
   "dependencies": {
     "babel": "^6.23.0",
-    "fs": "^0.0.1-security",
+    "bacon": "^0.0.1",
+    "highland": "^2.11.1",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
     "babel-env": "^2.4.1"
   },
   "babel": {
-    "plugins": [],
     "presets": [
       "env"
     ]

@@ -19,7 +19,7 @@ function loadImg(url) {
     image.src = url;
   });
 }
-exports.default = loadImage;
+exports.default = loadImg;
 
 
 function addImg(src) {
