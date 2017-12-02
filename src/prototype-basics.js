@@ -33,6 +33,7 @@ let prarieDog = {
   howl: function() {
     console.log(this.sound.toUpperCase())
   }
+  // sound: 'MERRRAHHH!' // Note that set properties OVERRIDE THE PROTOTYPE
 }
 Object.setPrototypeOf(prarieDog, dog)
 prarieDog.howl()
