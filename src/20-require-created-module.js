@@ -1,0 +1,17 @@
+const index = require('./19-module-creation')
+
+const log = console.log
+log('arrayMax:', index.arrayMax([10, 1, 5]))
+log('chunk:', index.chunk([1, 2, 3, 4, 5], 2))
+log('compact:', index.compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]))
+log('countOccurences:', index.countOccurences([1, 1, 2, 1, 2, 3], 1))
+log('flatten:', index.flatten([1, [2], [3, [4]]]))
+log('flattenDepth:', index.flattenDepth([1, [2], [[[3], 4], 5]], 2))
+log('deepFlatten', index.deepFlatten([1, [2], [[3], 4], 5]))
+log('difference:', index.difference([1, 2, 3], [1, 2, 4]))
+log('differenceWith:', index.differenceWith([1, 1.2, 1.5, 3], [1.9, 3], (a, b) => Math.round(a) === Math.round(b)))
+log('distictValuesOfArray:', index.distinceValuesOfArray([1, 2, 2, 3, 4, 4, 5]))
+log('dropElements:', index.dropElements([1, 2, 3, 4], n => n >= 3))
+log('dropRight:', index.dropRight([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))
+log('everyNth:', index.everyNth([1, 2, 3, 4, 5, 6], 2))
+log('filterNonUnique', index.filterNonUnique([1, 2, 2, 3, 4, 4, 5]))
