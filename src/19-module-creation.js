@@ -33,11 +33,30 @@ module.exports = {
   everyNth: (arr, nth) => arr.filter((e, i) => i % nth === 0),
   // Filters out the non-unique values in an array.
   filterNonUnique: arr => arr.filter(i => arr.indexOf(i) === arr.lastIndexOf(i)),
+  // Groups the elements of an array based on the given function
+  groupBy: (arr, func) => arr.map(typeof func === 'function' ? func : val => val[func])
+    .reduce((acc, val, i) => { acc[val] = (acc[val] || []).concat(arr[i]); return acc; }, {}),
+  // Returns the head of a list
+  head: arr => arr[0],
+  // Returns all the elements of an array except the last one
+  initial: arr => arr.slice(0, -1),
+  // Initializes an array containing the numbers in th especified range where start and end are inclusive
+  initArrayRange: (end, start = 0) => Array.from({ length: (end + 1) - start}).map((v, i) => i + start),
+  // Initializes an array of n length, with 'value' at each index.
+  initArrayFill: (n, value = 0) => Array(n).fill(value),
+  // Returns a list of elements that exist in both arrays
+  intersection: (a, b) => { const s = new Set(b); return a.filter(x => s.has(x))},
+  // Returns the last element in an array.
+  last: arr => arr[arr.length - 1],
+  // Maps the values of an array to an object using a function, where the key-value pairs
+  // consist of the original value as the key and the mapped value.
+  mapObject: (arr, fn) =>
+  (a => (a = [arr, arr.map(fn)], a[0].reduce((acc, val, i) => (acc[val] = a[1][i], acc), {})))(),
 }
 
 // TESTING /////////////////////////////////////////////////////////////////////
 
-// const log = console.log
+const log = console.log
 // log('arrayMax:', module.exports.arrayMax([10, 1, 5]))
 // log('chunk:', module.exports.chunk([1, 2, 3, 4, 5], 2))
 // log('compact:', module.exports.compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]))
@@ -52,6 +71,13 @@ module.exports = {
 // log('dropRight:', module.exports.dropRight([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))
 // log('everyNth:', module.exports.everyNth([1, 2, 3, 4, 5, 6], 2))
 // log('filterNonUnique', module.exports.filterNonUnique([1, 2, 2, 3, 4, 4, 5]))
-
+// log('groupBy:', module.exports.groupBy([6.1, 4.2, 6.3], Math.floor))
+// log('head:', module.exports.head([1, 2, 3]))
+// log('initial:', module.exports.initial([1, 2, 3]))
+// log('initArrayRange:', module.exports.initArrayRange(7, 3))
+// log('initArrayFill:', module.exports.initArrayFill(5, 2))
+// log('intersection:', module.exports.intersection([1, 2, 3], [4, 3, 2]))
+// log('last:', module.exports.last([1, 2, 3]))
+// log('mapObject:', module.exports.mapObject([1, 2, 3, 4], a => a * a))
 
 // log('funcname:', module.exports.)
